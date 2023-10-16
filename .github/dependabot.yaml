@@ -11,11 +11,11 @@ registries:
     url: https://npm.pkg.github.com
     token: ${{secrets.MY_GITHUB_PERSONAL_TOKEN}}
     replaces-base: true
-  npmjs:
+  npm-npmjs:
     type: npm-registry
     url: https://registry.npmjs.org
-#    username: octocat
-#    password: ${{secrets.MY_NPM_PASSWORD}}
+    username: octocat
+    password: ${{secrets.MY_NPM_PASSWORD}}
 #    replaces-base: true
 updates:
   # Maintain dependencies for Go modules
@@ -28,11 +28,10 @@ updates:
     allow:
       - dependency-name: "golang.org/x/crypto"
   # Maintain dependencies npm packages
-  # test updates for dependencies
   - package-ecosystem: "npm"
     directory: "/"
     registries:
       - npm-github
-      - npmjs
+      - npm-npmjs
     schedule:
       interval: "weekly"
