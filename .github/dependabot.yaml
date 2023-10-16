@@ -1,9 +1,14 @@
 version: 2
+registries:
+  # Define access for a private registry
+  gui-components:
+    type: git
+    url: https://npm.pkg.github.com
+    username: x-access-token
+    password: ${{secrets.DEPENDABOT_SECRET}}
 updates:
-  # Maintain dependencies for Go modules
+  # Maintain dependencies for xpert-manager
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "weekly"
-    allow:
-      - dependency-name: ""
