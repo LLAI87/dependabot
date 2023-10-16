@@ -9,5 +9,7 @@ updates:
   # Maintain dependencies for xpert-manager
   - package-ecosystem: "npm"
     directory: "/"
+    registries:
+      - npm-github
     schedule:
       interval: "weekly"
