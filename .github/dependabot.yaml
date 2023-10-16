@@ -21,6 +21,7 @@ updates:
     allow:
       - dependency-name: "golang.org/x/crypto"
   # Maintain dependencies npm packages
+  # test updates for dependencies
   - package-ecosystem: "npm"
     directory: "/"
     registries:
