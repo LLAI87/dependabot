@@ -1,7 +1,7 @@
 version: 2
 registries:
   # Define access for a private registry
-  iotechsystems/gui-components:
+  github:
     type: npm-registry
     url: https://npm.pkg.github.com/@iotechsystems
     token: ${{secrets.MY_GITHUB_PERSONAL_TOKEN}}
