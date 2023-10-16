@@ -1,11 +1,10 @@
 version: 2
 registries:
   # Define access for a private registry
-  gui-components:
-    type: git
-    url: https://npm.pkg.github.com
-    username: x-access-token
-    password: ${{secrets.DEPENDABOT_SECRET}}
+  npm-github:
+    type: npm-registry
+    url: https://npm.pkg.github.com/@iotechsystems
+    token: ${{secrets.MY_GITHUB_PERSONAL_TOKEN}}
 updates:
   # Maintain dependencies for xpert-manager
   - package-ecosystem: "npm"
