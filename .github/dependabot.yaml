@@ -1,12 +1,25 @@
 version: 2
 registries:
   # Define access for a private registry
+  github-octocat:
+    type: git
+    url: https://github.com
+    username: x-access-token
+    password: ${{secrets.DEPENDABOT_SECRET}}
   npm-github:
     type: npm-registry
     url: https://npm.pkg.github.com
     token: ${{secrets.MY_GITHUB_PERSONAL_TOKEN}}
 updates:
-  # Maintain dependencies for xpert-manager
+  # Maintain dependencies for Go modules
+  - package-ecosystem: "gomod"
+    directory: "/backend"
+    registries:
+      - github-octocat # Allow version updates for dependencies in this registry
+    schedule:
+      interval: "weekly"
+    allow:
+      - dependency-name: "golang.org/x/crypto"
   - package-ecosystem: "npm"
     directory: "/"
     registries:
