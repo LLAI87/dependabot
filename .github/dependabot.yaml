@@ -20,6 +20,7 @@ updates:
       interval: "weekly"
     allow:
       - dependency-name: "golang.org/x/crypto"
+  # Maintain dependencies npm packages
   - package-ecosystem: "npm"
     directory: "/"
     registries:
