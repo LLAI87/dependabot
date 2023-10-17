@@ -15,7 +15,7 @@ registries:
     type: npm-registry
     url: https://registry.npmjs.org
     username: x-access-token
-    password: 12341234
+    password: ${{secrets.MY_GITHUB_PERSONAL_TOKEN}}
 updates:
   # Maintain dependencies for Go modules
   - package-ecosystem: "gomod"
