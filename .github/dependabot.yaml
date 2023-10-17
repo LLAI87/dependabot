@@ -11,7 +11,7 @@ registries:
     url: https://npm.pkg.github.com
     token: ${{secrets.MY_GITHUB_PERSONAL_TOKEN}}
     replaces-base: true
-  npmjs:
+  npm-npmjs:
     type: npm-registry
     url: https://registry.npmjs.com
 #    username: x-access-token
@@ -32,6 +32,6 @@ updates:
     directory: "/"
     registries:
       - npm-github
-      - npmjs
+      - npm-npmjs
     schedule:
       interval: "weekly"
