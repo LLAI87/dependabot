@@ -11,11 +11,11 @@ registries:
     url: https://npm.pkg.github.com
     token: ${{secrets.MY_GITHUB_PERSONAL_TOKEN}}
     replaces-base: true
-  npm-npmjs:
-    type: npm-registry
-    url: https://registry.npmjs.org
-    username: x-access-token
-    password: ${{secrets.MY_GITHUB_PERSONAL_TOKEN}}
+#  npm-npmjs:
+#    type: npm-registry
+#    url: https://registry.npmjs.org
+#    username: x-access-token
+#    password: ${{secrets.MY_GITHUB_PERSONAL_TOKEN}}
 updates:
   # Maintain dependencies for Go modules
   - package-ecosystem: "gomod"
@@ -32,6 +32,6 @@ updates:
     directory: "/"
     registries:
       - npm-github
-      - npm-npmjs
+#      - npm-npmjs
     schedule:
       interval: "weekly"
