@@ -7,7 +7,7 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@iotechsystems/gui-components": "^1.0.0-dev",
-    "@mui/icons-material": "^5.6.2",
+    "@mui/icons-material": "^5.15.4",
     "@mui/material": "^5.14.2",
     "dayjs": "^1.10.1",
     "downloadjs": "^1.4.1",
